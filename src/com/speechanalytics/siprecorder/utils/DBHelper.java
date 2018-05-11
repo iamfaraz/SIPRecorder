@@ -10,15 +10,11 @@ import java.sql.SQLException;
 
 public class DBHelper {
 
-    static String dbUrl = "jdbc:mysql://192.168.8.125:3306/sap";
-    static String userName = "user1";
-    static String password = "pass";
+    static String dbUrl = "";           //example: "jdbc:mysql://<ip>:<port>/<dbName>"
+    static String userName = "";        //example: "user"
+    static String password = "";        //example: "pass"
 
-    public static void main(String[] args){
-        InsertData("dsfsd", "bajdf", "basj", "C:\\sdfsd\\faraz.wav");
-    }
-
-    public static boolean InsertData(String from, String to, String call_id, String filePath) {
+    public boolean InsertData(String from, String to, String call_id, String filePath) {
         try {
             Connection conn = DriverManager.getConnection(dbUrl, userName, password);
 
